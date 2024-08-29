@@ -9,5 +9,18 @@ There is no automated test for this one, this is more for you to understand time
 */
 
 function calculateTime(n) {
-    return 0.01;
+    let currentDate = new Date();
+    startTime=currentDate.getSeconds();
+    a=0;
+    for(let i=0 ;i<n ; i++){
+        a=a+i
+    }
+    currentDate= new Date()
+    endTime =currentDate.getSeconds();
+
+    let sec =endTime-startTime;
+    console.log("Seconds : "+sec, " Sum : "+ a);
+    return sec;
 }
+
+calculateTime(10000)
